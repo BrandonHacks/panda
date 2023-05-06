@@ -347,7 +347,7 @@ static const addr_checks* hyundai_canfd_init(uint16_t param) {
 
   // no long for ICE yet
   if (!hyundai_ev_gas_signal && !hyundai_hybrid_gas_signal) {
-    hyundai_longitudinal = false;
+    hyundai_longitudinal = true;
   }
 
   if (hyundai_longitudinal) {
