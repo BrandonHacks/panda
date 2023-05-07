@@ -345,11 +345,6 @@ static const addr_checks* hyundai_canfd_init(uint16_t param) {
   hyundai_canfd_hda2 = GET_FLAG(param, HYUNDAI_PARAM_CANFD_HDA2);
   hyundai_canfd_alt_buttons = GET_FLAG(param, HYUNDAI_PARAM_CANFD_ALT_BUTTONS);
 
-  // no long for ICE yet
-  if (!hyundai_ev_gas_signal && !hyundai_hybrid_gas_signal) {
-    hyundai_longitudinal = true;
-  }
-
   if (hyundai_longitudinal) {
     hyundai_canfd_rx_checks = (addr_checks){hyundai_canfd_long_addr_checks, HYUNDAI_CANFD_LONG_ADDR_CHECK_LEN};
   } else {
